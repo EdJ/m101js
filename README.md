@@ -5,6 +5,7 @@ Vagrant
 ================
 
 - Install [Vagrant](http://vagrantup.com/)
+- Install [VirtualBox](http://www.virtualbox.org/)
 - ```
 vagrant plugin install vagrant-berkshelf
 ```
