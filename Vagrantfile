@@ -5,9 +5,14 @@ Vagrant.configure("2") do |config|
   # Use Berkshelf for managing chef cookbook dependencies.
   config.berkshelf.enabled = true
 
-  # Use default precise32 box.
-  config.vm.box = "precise32"
-  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+  # Detect 32/64 bit OS and use appropriate box
+  if ['a'].pack('P').length  > 4
+  	config.vm.box = "precise64"
+  	config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+  else
+  	config.vm.box = "precise32"
+  	config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+  end
 
   # Setup network forwarding
   config.vm.network :forwarded_port, guest: 8080, host: 8080

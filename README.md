@@ -23,6 +23,8 @@ vagrant ssh
 Notes
 ================
 
+If you have 64 bit OS Vagrant will use 64bit box, or else it will use 32bit box.
+
 Any content that needs to be accessible on the VM instance can be put in the ./src directory.
 
 When installing NPM packages be sure to use the --no-bin-links flag, e.g:
