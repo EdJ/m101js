@@ -6,8 +6,8 @@ Vagrant.configure("2") do |config|
   config.berkshelf.enabled = true
 
   # Use default precise32 box.
-  config.vm.box = "precise32"
-  config.vm.box_url = "http://files.vagrantup.com/precise32.box"
+  config.vm.box = "precise64"
+  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
   # Setup network forwarding
   config.vm.network :forwarded_port, guest: 8080, host: 8080
